@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, section, .test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    max-width: 1440px;
+    height: 100vh;
+    padding: 5%;
+    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    flex-direction: column;
+}
+
+section {
+    background-color: #fff;
+    min-width: 70vw;
+    border-radius: 1rem;
+    padding: 5%;
+    background-image: url(../images/bg-pattern-desktop.svg), url(../images/illustration-woman-online-desktop.svg);
+    background-position: -10% 50%, -10% 50%;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: hsl(238, 29%, 16%);
+}
+
+h2 {
+   font-weight: 400;
+   color: hsl(237, 12%, 33%);
+   margin-top: 0.7rem;
+   margin-bottom: 0.7rem;
+   font-size: 0.85rem;
+}
+
+h2:hover {
+    color:hsl(14, 88%, 65%);
+}
+
+p {
+    color: hsl(240, 6%, 50%);
+    line-height: 1.2rem;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+}
+
+.accordion {
+    padding: 2% 0;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.arrow {
+    display: inline-flex;
+    float: right;
+    transition: transform 0.2s ease-out;
+}
+
+.col {
+    padding: 5%;
+    flex-basis: 100%;
+}
+
+.box {
+    position: absolute;
+    max-width: 25%;
+    top: 45%;
+    left: -10%;
+    z-index: 10;
+}
+
+.woman {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    section {
+        flex-direction: column;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-position: 50% 0;
+        background-size: 60%;
+    }
+
+    .box {
+        display: none;
+    }
+
+    .woman {
+        display: inline;
+        position: absolute;
+        top: -30%;
+        left: 46%;
+        transform: translateX(-50%);
+    }
+}
